@@ -3,6 +3,8 @@ import './styles.css'
 const app = document.querySelector('#app')
 
 app.innerHTML = `
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Ciclo Salta, inicio">
       <span class="brand-mark" aria-hidden="true">
@@ -21,7 +23,7 @@ app.innerHTML = `
     </nav>
   </header>
 
-  <main>
+  <main id="contenido">
     <section class="hero" id="inicio">
       <div class="hero-copy">
         <p class="eyebrow">Separación domiciliaria · Compostaje local</p>
@@ -36,14 +38,14 @@ app.innerHTML = `
         <p class="pilot-note">Proyecto piloto · Cupos limitados · Cobertura inicial reducida</p>
       </div>
 
-      <div class="hero-visual" aria-label="Separación domiciliaria de residuos orgánicos">
-        <div class="visual-backdrop"></div>
+      <div class="hero-visual" role="img" aria-label="Recipiente domiciliario para separar residuos orgánicos junto a restos de cocina">
+        <div class="visual-backdrop" aria-hidden="true"></div>
         <div class="kitchen-card">
           <div class="card-topline">
             <span>En casa</span>
             <span class="status-dot">Separado</span>
           </div>
-          <div class="counter-scene">
+          <div class="counter-scene" aria-hidden="true">
             <div class="cutting-board">
               <span class="peel peel-one"></span>
               <span class="peel peel-two"></span>
@@ -75,32 +77,34 @@ app.innerHTML = `
     </section>
 
     <section class="intro" id="como-funciona">
-      <div class="section-kicker">Un circuito simple</div>
-      <div class="intro-heading">
-        <h2>De tu cocina a la tierra, con un sistema ordenado.</h2>
-        <p>Retiramos, procesamos y devolvemos valor a un material que normalmente termina mezclado con la basura.</p>
-      </div>
-      <div class="steps">
-        <article>
-          <span>01</span>
-          <h3>Separás</h3>
-          <p>Guardás los residuos orgánicos indicados en el recipiente del servicio.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Retiramos</h3>
-          <p>Pasamos por tu domicilio según el cronograma acordado.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Compostamos</h3>
-          <p>Los procesamos localmente bajo condiciones controladas.</p>
-        </article>
+      <div class="section-shell">
+        <div class="section-kicker">Un circuito simple</div>
+        <div class="intro-heading">
+          <h2>De tu cocina a la tierra, con un sistema ordenado.</h2>
+          <p>Retiramos, procesamos y devolvemos valor a un material que normalmente termina mezclado con la basura.</p>
+        </div>
+        <div class="steps">
+          <article>
+            <span>01</span>
+            <h3>Separás</h3>
+            <p>Guardás los residuos orgánicos indicados en el recipiente del servicio.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Retiramos</h3>
+            <p>Pasamos por tu domicilio según el cronograma acordado.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Compostamos</h3>
+            <p>Los procesamos localmente bajo condiciones controladas.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="service" id="servicio">
-      <div>
+      <div class="service-heading">
         <p class="section-kicker">Servicio domiciliario</p>
         <h2>Menos residuos mezclados. Más materia que vuelve al suelo.</h2>
       </div>
@@ -121,10 +125,12 @@ app.innerHTML = `
     </section>
 
     <section class="signup" id="sumate">
-      <p class="section-kicker">Cupos piloto</p>
-      <h2>¿Querés separar tus orgánicos en casa?</h2>
-      <p>Dejanos tus datos y te contamos si tu zona está dentro de la cobertura inicial.</p>
-      <a class="button button-primary" href="mailto:hola@ciclosalta.com?subject=Quiero%20participar%20del%20piloto">Quiero participar</a>
+      <div class="signup-copy">
+        <p class="section-kicker">Cupos piloto</p>
+        <h2>¿Querés separar tus orgánicos en casa?</h2>
+        <p>Dejanos tus datos y te contamos si tu zona está dentro de la cobertura inicial.</p>
+      </div>
+      <a class="button button-light" href="mailto:hola@ciclosalta.com?subject=Quiero%20participar%20del%20piloto">Quiero participar</a>
     </section>
   </main>
 
