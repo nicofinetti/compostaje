@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="es-AR" data-project-name="Ciclo Salta">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ciclo Salta es un proyecto piloto de recolección domiciliaria de residuos orgánicos en Salta Capital. Sumate para validar interés en tu zona."
+    />
+    <meta name="theme-color" content="#2F4F3E" />
+    <meta property="og:title" content="Ciclo Salta · Proyecto piloto" />
+    <meta
+      property="og:description"
+      content="Recolección domiciliaria de residuos orgánicos en Salta Capital. Cupos limitados. Cobertura inicial reducida."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./og-image.svg" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..144,500;8..144,600;8..144,700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ciclo Salta · Proyecto piloto de residuos orgánicos en Salta Capital</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <div class="site">
+      <header class="header" data-header>
+        <div class="container header__inner">
+          <a class="logo" href="#inicio" aria-label="Ciclo Salta — inicio">
+            <img class="logo__mark" src="./src/assets/illustrations/logo-mark.svg" alt="" width="28" height="28" />
+            <span class="logo__text" data-project-name>Ciclo Salta</span>
+            <span class="logo__badge">Piloto</span>
+          </a>
+
+          <nav class="nav" aria-label="Principal">
+            <a class="nav__link" href="#como-funciona">Cómo funciona</a>
+            <a class="nav__link" href="#balde">Qué va en el balde</a>
+            <a class="nav__link" href="#piloto">El piloto</a>
+            <a class="nav__link" href="#faq">Preguntas</a>
+            <a class="btn btn--primary" href="#sumate">Quiero sumarme</a>
+          </nav>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="menu-movil"
+            aria-label="Abrir menú"
+          >
+            <svg class="nav-toggle__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="nav-panel" id="menu-movil" data-nav-panel>
+          <nav aria-label="Menú móvil">
+            <ul class="nav-panel__list">
+              <li><a class="nav-panel__link" href="#como-funciona">Cómo funciona</a></li>
+              <li><a class="nav-panel__link" href="#balde">Qué va en el balde</a></li>
+              <li><a class="nav-panel__link" href="#no-admitidos">Qué no va</a></li>
+              <li><a class="nav-panel__link" href="#piloto">El piloto</a></li>
+              <li><a class="nav-panel__link" href="#cobertura">Zona de cobertura</a></li>
+              <li><a class="nav-panel__link" href="#faq">Preguntas frecuentes</a></li>
+              <li><a class="nav-panel__link" href="#sumate">Quiero sumarme al piloto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main id="contenido">
+        <!-- 2. Hero -->
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+          <div class="hero__texture" aria-hidden="true"></div>
+          <img
+            class="hero__visual"
+            src="./src/assets/illustrations/hero-cycle.svg"
+            alt=""
+            width="320"
+            height="320"
+          />
+          <div class="container hero__inner">
+            <p class="hero__brand">
+              <span data-project-name>Ciclo Salta</span>
+              <span class="hero__brand-tag">Proyecto piloto</span>
+            </p>
+            <h1 id="hero-title">Tus residuos orgánicos pueden volver al suelo</h1>
+            <p class="hero__lead">
+              <span data-project-name>Ciclo Salta</span> es un proyecto piloto de recolección domiciliaria
+              para personas que quieren separar sus residuos orgánicos, pero no tienen el espacio, el tiempo
+              o la infraestructura para procesarlos en casa.
+            </p>
+            <div class="btn-group">
+              <a class="btn btn--primary" href="#sumate">Quiero sumarme al piloto</a>
+              <a class="btn btn--secondary" href="#como-funciona">Ver cómo funciona</a>
+            </div>
+            <p class="notice-band" role="note">
+              <span>Proyecto piloto</span>
+              <span>Cupos limitados</span>
+              <span>Cobertura inicial reducida</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- 3. Esto es para vos si… -->
+        <section class="section" id="para-vos" aria-labelledby="para-vos-title">
+          <div class="container">
+            <header class="section__header reveal">
+              <p class="section__eyebrow">Encaje</p>
+              <h2 id="para-vos-title">Esto es para vos si…</h2>
+              <p class="section__lead">
+                Separar tus residuos orgánicos puede ser simple. Nos ocupamos del procesamiento fuera de tu casa.
+              </p>
+            </header>
+
+            <ul class="audience-list reveal">
+              <li class="audience-item">
+                <svg class="audience-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Querés separar orgánicos, pero no tenés espacio o patio para compostar.</p>
+              </li>
+              <li class="audience-item">
+                <svg class="audience-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Vivís en un departamento o en una vivienda pequeña y necesitás una solución ordenada.</p>
+              </li>
+              <li class="audience-item">
+                <svg class="audience-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Intentaste compostar en casa y no lograste sostenerlo en el tiempo.</p>
+              </li>
+              <li class="audience-item">
+                <svg class="audience-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Preferís un retiro periódico con balde limpio de reemplazo, sin gestionar el proceso vos.</p>
+              </li>
+              <li class="audience-item">
+                <svg class="audience-item__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <path d="M4 10.5 8 14.5 16 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <p>Estás en Salta Capital y querés conocer si tu zona entra en la primera microzona del piloto.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 4. Cómo funciona -->
+        <section class="section section--alt" id="como-funciona" aria-labelledby="como-title">
+          <div class="container">
+            <header class="section__header reveal">
+              <p class="section__eyebrow">Proceso</p>
+              <h2 id="como-title">Cómo funciona</h2>
+              <p class="section__lead">
+                Un circuito claro, con etapas controladas. Empezamos chicos para construir una operación ordenada.
+              </p>
+            </header>
+
+            <ol class="grid-steps">
+              <li class="step reveal">
+                <img class="step__icon" src="./src/assets/illustrations/step-separar.svg" alt="" width="48" height="48" />
+                <p class="step__number">Paso 1</p>
+                <h3 class="step__title">Separás</h3>
+                <p class="step__text">
+                  Guardás los residuos orgánicos admitidos en un balde limpio y cerrado.
+                </p>
+              </li>
+              <li class="step reveal">
+                <img class="step__icon" src="./src/assets/illustrations/step-retiro.svg" alt="" width="48" height="48" />
+                <p class="step__number">Paso 2</p>
+                <h3 class="step__title">Coordinamos el retiro</h3>
+                <p class="step__text">
+                  Retiramos el balde según la frecuencia y zona definidas para el piloto.
+                </p>
+              </li>
+              <li class="step reveal">
+                <img class="step__icon" src="./src/assets/illustrations/step-balde-limpio.svg" alt="" width="48" height="48" />
+                <p class="step__number">Paso 3</p>
+                <h3 class="step__title">Recibís un balde limpio</h3>
+                <p class="step__text">
+                  Al retirar el material dejamos otro recipiente listo para utilizar.
+                </p>
+              </li>
+              <li class="step reveal">
+                <img class="step__icon" src="./src/assets/illustrations/step-procesar.svg" alt="" width="48" height="48" />
+                <p class="step__number">Paso 4</p>
+                <h3 class="step__title">Procesamos el material</h3>
+                <p class="step__text">
+                  Los residuos pasan por etapas controladas de acondicionamiento, compostaje y vermicompostaje.
+                </p>
+              </li>
+              <li class="step reveal">
+                <img class="step__icon" src="./src/assets/illustrations/step-suelo.svg" alt="" width="48" height="48" />
+                <p class="step__number">Paso 5</p>
+                <h3 class="step__title">Vuelven al suelo</h3>
+                <p class="step__text">
+                  El proceso produce compost y vermicompost para plantas, huertas y espacios verdes.
+                </p>
+              </li>
+            </ol>
+
+            <p class="process-note reveal">
+              El material no se transforma de un día para el otro ni pasa directo a las lombrices.
+              Primero se acondiciona y compostea; el vermicompostaje es una etapa posterior del proceso.
+            </p>
+
+            <p class="loop reveal" aria-label="Circuito resumido">
+              <span class="loop__item">Orgánicos</span>
+              <span class="loop__arrow" aria-hidden="true">→</span>
+              <span class="loop__item">Proceso controlado</span>
+              <span class="loop__arrow" aria-hidden="true">→</span>
+              <span class="loop__item">Compost y vermicompost</span>
+              <span class="loop__arrow" aria-hidden="true">→</span>
+              <span class="loop__item">Suelo</span>
+            </p>
+          </div>
+        </section>
+
+        <!-- 5 y 6. Qué sí / qué no -->
+        <section class="section" id="balde" aria-labelledby="balde-title">
+          <div class="container">
+            <header class="section__header reveal">
+              <p class="section__eyebrow">Separación</p>
+              <h2 id="balde-title">Qué podés colocar en el balde</h2>
+              <p class="section__lead">
+                Empezamos con una lista acotada para mantener un proceso limpio y controlado.
+              </p>
+            </header>
+
+            <div class="split-lists">
+              <div class="reveal">
+                <h3 class="list-block__title">Admitidos</h3>
+                <ul class="checklist">
+                  <li class="checklist__item checklist__item--yes">
+                    <span class="checklist__mark" aria-hidden="true">✓</span>
+                    <span class="checklist__text">Restos de frutas y verduras</span>
+                  </li>
+                  <li class="checklist__item checklist__item--yes">
+                    <span class="checklist__mark" aria-hidden="true">✓</span>
+                    <span class="checklist__text">Yerba</span>
+                  </li>
+                  <li class="checklist__item checklist__item--yes">
+                    <span class="checklist__mark" aria-hidden="true">✓</span>
+                    <span class="checklist__text">Café y filtros de papel</span>
+                  </li>
+                  <li class="checklist__item checklist__item--yes">
+                    <span class="checklist__mark" aria-hidden="true">✓</span>
+                    <span class="checklist__text">Cáscaras de huevo</span>
+                  </li>
+                  <li class="checklist__item checklist__item--yes">
+                    <span class="checklist__mark" aria-hidden="true">✓</span>
+                    <span class="checklist__text">Flores y restos vegetales pequeños</span>
+                  </li>
+                  <li class="checklist__item checklist__item--yes">
+                    <span class="checklist__mark" aria-hidden="true">✓</span>
+                    <span class="checklist__text">Servilletas y cartón limpio sin plastificar, en cantidades moderadas</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="reveal" id="no-admitidos">
+                <h3 class="list-block__title">Qué no podés colocar</h3>
+                <ul class="checklist">
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Carnes</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Huesos</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Pescado</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Lácteos</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Aceites</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Líquidos</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Pañales</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Residuos de mascotas</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Plásticos</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Vidrio</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Metales</span>
+                  </li>
+                  <li class="checklist__item checklist__item--no">
+                    <span class="checklist__mark" aria-hidden="true">✕</span>
+                    <span class="checklist__text">Materiales compostables industriales sin validación previa</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="info-callout reveal">
+              Estas listas son iniciales y podrán ajustarse durante el piloto según la operación y la calidad del material recibido.
+            </p>
+          </div>
+        </section>
+
+        <!-- 7. Qué pasa con tus residuos -->
+        <section class="section section--alt" id="destino" aria-labelledby="destino-title">
+          <div class="container">
+            <header class="section__header reveal">
+              <p class="section__eyebrow">Destino</p>
+              <h2 id="destino-title">Qué pasa con tus residuos</h2>
+              <p class="section__lead">
+                El objetivo es transformar residuos orgánicos domiciliarios en enmiendas útiles para el suelo,
+                con un proceso local y controlado.
+              </p>
+            </header>
+
+            <div class="grid-2 reveal">
+              <article class="step">
+                <p class="step__number">Acondicionamiento</p>
+                <h3 class="step__title">Preparación del material</h3>
+                <p class="step__text">
+                  Se revisa y acondiciona lo recolectado para sostener un proceso limpio y ordenado.
+                </p>
+              </article>
+              <article class="step">
+                <p class="step__number">Compostaje</p>
+                <h3 class="step__title">Descomposición controlada</h3>
+                <p class="step__text">
+                  El material pasa por compostaje como etapa central de transformación biológica.
+                </p>
+              </article>
+              <article class="step">
+                <p class="step__number">Vermicompostaje</p>
+                <h3 class="step__title">Etapa posterior</h3>
+                <p class="step__text">
+                  Parte del proceso puede continuar con vermicompostaje. No todo el material se procesa
+                  directamente con lombrices.
+                </p>
+              </article>
+              <article class="step">
+                <p class="step__number">Resultado</p>
+                <h3 class="step__title">Compost y vermicompost</h3>
+                <p class="step__text">
+                  Se obtiene material para plantas, huertas y espacios verdes. Durante el piloto no
+                  prometemos devolución garantizada a cada hogar.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. El piloto en Salta -->
+        <section class="section" id="piloto" aria-labelledby="piloto-title">
+          <div class="container">
+            <header class="section__header reveal">
+              <p class="section__eyebrow">Alcance</p>
+              <h2 id="piloto-title">El piloto en Salta</h2>
+              <p class="section__lead">
+                Empezamos con una microzona para construir una operación ordenada. Queremos conocer cuántos hogares están interesados.
+              </p>
+            </header>
+
+            <div class="pilot-points reveal">
+              <div class="pilot-point">
+                <strong>Es un proyecto piloto</strong>
+                <p>
+                  Todavía estamos validando demanda, frecuencia y operación. No es un servicio consolidado a gran escala.
+                </p>
+              </div>
+              <div class="pilot-point">
+                <strong>Cobertura inicial reducida</strong>
+                <p>
+                  La recolección empezará en una microzona de Salta Capital. La zona exacta se confirmará según el interés registrado.
+                </p>
+              </div>
+              <div class="pilot-point">
+                <strong>Cupos limitados</strong>
+                <p>
+                  La capacidad operativa será acotada al inicio. Registrarse no garantiza ingreso inmediato.
+                </p>
+              </div>
+              <div class="pilot-point">
+                <strong>Te vamos a contactar</strong>
+                <p>
+                  Cuando se defina la primera microzona, contactaremos a las personas interesadas para coordinar los siguientes pasos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. Zona de cobertura -->
+        <section class="section section--alt" id="cobertura" aria-labelledby="cobertura-title">
+          <div class="container">
+            <header class="section__header reveal">
+              <p class="section__eyebrow">Territorio</p>
+              <h2 id="cobertura-title">Zona de cobertura</h2>
+              <p class="section__lead">
+                La primera etapa será acotada. Si tu barrio está cerca de la microzona piloto, escribinos.
+              </p>
+            </header>
+
+            <div class="zone-box reveal">
+              <p class="zone-box__label">Microzona piloto (placeholder)</p>
+              <!-- PLACEHOLDER: zona piloto — editar también en src/config.js → pilotZone -->
+              <p class="zone-box__value" data-pilot-zone>[Barrio / microzona — por definir]</p>
+              <p>
+                Microzona piloto en Salta Capital (detalle próximamente). Dejá tu barrio en el formulario
+                para que podamos evaluar cercanía y demanda.
+              </p>
+              <div class="btn-group">
+                <a class="btn btn--primary" href="#sumate">Quiero sumarme al piloto</a>
+                <a class="btn btn--secondary-dark" href="#" data-whatsapp-direct>Consultar por WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. FAQ -->
+        <section class="section" id="faq" aria-labelledby="faq-title">
+          <div class="container container--narrow">
+            <header class="section__header reveal">
+              <p class="section__eyebrow">Dudas</p>
+              <h2 id="faq-title">Preguntas frecuentes</h2>
+              <p class="section__lead">
+                Respuestas claras sobre el alcance actual del piloto.
+              </p>
+            </header>
+
+            <div class="faq reveal">
+              <details class="faq__item">
+                <summary class="faq__question">
+                  ¿Ya está funcionando el servicio?
+                  <svg class="faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </summary>
+                <p class="faq__answer">
+                  Estamos en etapa de validación. Esta página busca reunir personas interesadas para definir
+                  la primera microzona y la operación inicial.
+                </p>
+              </details>
+
+              <details class="faq__item">
+                <summary class="faq__question">
+                  ¿Si me anoto, entro automático?
+                  <svg class="faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </summary>
+                <p class="faq__answer">
+                  No. Registrarse expresa interés. Los cupos serán limitados y la cobertura inicial, reducida.
+                  Te contactaremos cuando se defina la microzona.
+                </p>
+              </details>
+
+              <details class="faq__item">
+                <summary class="faq__question">
+                  ¿Cada cuánto retiran el balde?
+                  <svg class="faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </summary>
+                <p class="faq__answer">
+                  La frecuencia todavía no está definida. Se va a ajustar según demanda, zona y capacidad operativa del piloto.
+                </p>
+              </details>
+
+              <details class="faq__item">
+                <summary class="faq__question">
+                  ¿Tiene costo?
+                  <svg class="faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </summary>
+                <p class="faq__answer">
+                  En esta etapa el objetivo no es cobrar: queremos validar interés. Si más adelante hay un modelo
+                  de contraprestación, se comunicará con claridad.
+                </p>
+              </details>
+
+              <details class="faq__item">
+                <summary class="faq__question">
+                  ¿Me van a devolver compost?
+                  <svg class="faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </summary>
+                <p class="faq__answer">
+                  El proceso produce compost y vermicompost, pero durante el piloto no garantizamos devolución
+                  a cada hogar. El foco inicial es recolectar, procesar bien y aprender de la operación.
+                </p>
+              </details>
+
+              <details class="faq__item">
+                <summary class="faq__question">
+                  ¿Huele o atrae moscas?
+                  <svg class="faq__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+                </summary>
+                <p class="faq__answer">
+                  El balde debe mantenerse limpio y cerrado, y solo con materiales admitidos. Eso reduce olores
+                  e insectos. Si surge un problema, se puede ajustar la guía durante el piloto.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11. Formulario / CTA final -->
+        <section class="section section--alt" id="sumate" aria-labelledby="sumate-title">
+          <div class="container">
+            <div class="cta-layout">
+              <div class="cta-aside reveal">
+                <p class="section__eyebrow">Participación</p>
+                <h2 id="sumate-title">Quiero sumarme al piloto</h2>
+                <p class="cta-aside__title">Dejanos tus datos para evaluar interés en tu zona.</p>
+                <p>
+                  Completá el formulario y se abrirá WhatsApp con un mensaje listo para enviar.
+                  También podés escribirnos directo si preferís no completar el formulario.
+                </p>
+                <p class="form__note">
+                  Registrarse no garantiza ingreso inmediato. Cupos limitados. Cobertura inicial reducida.
+                </p>
+                <a class="btn btn--ghost" href="#" data-whatsapp-direct>
+                  Escribir por WhatsApp sin formulario
+                </a>
+              </div>
+
+              <div class="form-panel reveal">
+                <form class="form" data-interest-form novalidate>
+                  <div class="form__field">
+                    <label class="form__label" for="nombre">
+                      Nombre <span class="form__required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form__input"
+                      id="nombre"
+                      name="nombre"
+                      type="text"
+                      autocomplete="name"
+                      required
+                      aria-describedby="error-nombre"
+                    />
+                    <p class="form__error" id="error-nombre" role="alert"></p>
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label" for="zona">
+                      Barrio o zona <span class="form__required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form__input"
+                      id="zona"
+                      name="zona"
+                      type="text"
+                      autocomplete="address-level2"
+                      required
+                      aria-describedby="error-zona hint-zona"
+                    />
+                    <p class="form__hint" id="hint-zona">Indicá tu barrio en Salta Capital.</p>
+                    <p class="form__error" id="error-zona" role="alert"></p>
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label" for="whatsapp">
+                      WhatsApp <span class="form__required" aria-hidden="true">*</span>
+                    </label>
+                    <input
+                      class="form__input"
+                      id="whatsapp"
+                      name="whatsapp"
+                      type="tel"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      placeholder="Ej.: 387 555-1234"
+                      required
+                      aria-describedby="error-whatsapp"
+                    />
+                    <p class="form__error" id="error-whatsapp" role="alert"></p>
+                  </div>
+
+                  <div class="form__field">
+                    <label class="form__label" for="comentario">Comentario (opcional)</label>
+                    <textarea
+                      class="form__textarea"
+                      id="comentario"
+                      name="comentario"
+                      rows="4"
+                      placeholder="Horarios, dudas o referencias de tu zona"
+                    ></textarea>
+                  </div>
+
+                  <button class="btn btn--primary btn--full" type="submit">
+                    Quiero sumarme al piloto
+                  </button>
+
+                  <p class="form__note">
+                    Al enviar se abre WhatsApp con tus datos. No guardamos la información en este sitio.
+                    <!-- PLACEHOLDER WhatsApp del proyecto: src/config.js → whatsappNumber (5490000000000) -->
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- 12. Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__grid">
+            <div>
+              <p class="footer__brand" data-project-name>Ciclo Salta</p>
+              <p class="footer__text">
+                Proyecto piloto de recolección y transformación de residuos orgánicos en Salta Capital.
+                Operación de pequeña escala, en etapa de validación.
+              </p>
+            </div>
+
+            <div>
+              <p class="footer__heading">Contacto</p>
+              <ul class="footer__list">
+                <li>
+                  <!-- PLACEHOLDER: correo — también en src/config.js → email -->
+                  <a class="footer__link" data-email href="mailto:hola@ejemplo.com">hola@ejemplo.com</a>
+                </li>
+                <li>
+                  <!-- PLACEHOLDER: WhatsApp — también en src/config.js → whatsappNumber -->
+                  <a class="footer__link" href="#" data-whatsapp-direct>WhatsApp</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p class="footer__heading">Redes</p>
+              <!-- PLACEHOLDER: redes sociales — src/config.js → social -->
+              <div class="footer__social">
+                <a class="social-link" data-social-instagram href="#" rel="noopener noreferrer">Instagram</a>
+                <a class="social-link" data-social-facebook href="#" rel="noopener noreferrer">Facebook</a>
+              </div>
+              <p class="footer__text footer__zone">
+                Zona piloto:
+                <span data-pilot-zone>[Barrio / microzona — por definir]</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="footer__bottom">
+            <p>
+              <span data-project-name>Ciclo Salta</span> · Proyecto piloto · Salta Capital.
+              Esta página no constituye oferta de servicio consolidado.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
