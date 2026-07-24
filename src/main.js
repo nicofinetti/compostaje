@@ -55,7 +55,7 @@ function configureSocialLink(el, url) {
 function applyConfigToDom() {
   document.title = `${projectName} · Proyecto piloto de residuos orgánicos en Salta Capital`;
 
-  document.querySelectorAll('[data-project-name]').forEach((el) => {
+  document.querySelectorAll('body [data-project-name]').forEach((el) => {
     el.textContent = projectName;
   });
 
