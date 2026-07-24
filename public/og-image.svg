@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none" aria-hidden="true">
+  <!--
+    PLACEHOLDER provisional.
+    Antes de publicar: reemplazar este archivo por PNG o JPG 1200×630
+    y apuntar og:image a una URL absoluta del dominio definitivo.
+  -->
+  <rect width="1200" height="630" fill="#2F4F3E"/>
+  <circle cx="980" cy="120" r="220" fill="#3F6B4F" opacity="0.45"/>
+  <circle cx="160" cy="520" r="180" fill="#243D30" opacity="0.55"/>
+  <text x="80" y="280" fill="#F5F7F4" font-family="Georgia, serif" font-size="72" font-weight="600">Ciclo Salta</text>
+  <text x="80" y="360" fill="#E7EDE6" font-family="Arial, sans-serif" font-size="36">Proyecto piloto · Salta Capital</text>
+  <text x="80" y="430" fill="#C4B59A" font-family="Arial, sans-serif" font-size="28">Residuos orgánicos que vuelven al suelo</text>
+</svg>
