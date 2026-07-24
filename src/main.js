@@ -6,7 +6,51 @@ import './styles/components.css';
 import './styles/sections.css';
 import { projectConfig } from './config.js';
 
+/** Indica que JavaScript está disponible (mejora progresiva). */
+document.documentElement.classList.add('js');
+
 const { projectName, whatsappNumber, email, pilotZone, social } = projectConfig;
+
+const DESKTOP_NAV_MQ = '(min-width: 900px)';
+
+function isSocialUrlConfigured(url) {
+  if (typeof url !== 'string') return false;
+  const trimmed = url.trim();
+  return trimmed.length > 0 && trimmed !== '#';
+}
+
+/**
+ * Abre WhatsApp en una pestaña nueva; si el navegador la bloquea, navega en la misma.
+ * No muestra confirmaciones ni guarda datos.
+ */
+function openWhatsApp(url) {
+  const popup = window.open(url, '_blank', 'noopener,noreferrer');
+  if (popup === null) {
+    window.location.href = url;
+  }
+}
+
+function configureSocialLink(el, url) {
+  if (!el) return false;
+
+  if (!isSocialUrlConfigured(url)) {
+    el.hidden = true;
+    el.removeAttribute('href');
+    el.removeAttribute('target');
+    el.removeAttribute('rel');
+    el.setAttribute('tabindex', '-1');
+    el.setAttribute('aria-hidden', 'true');
+    return false;
+  }
+
+  el.hidden = false;
+  el.removeAttribute('tabindex');
+  el.removeAttribute('aria-hidden');
+  el.setAttribute('href', url.trim());
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener noreferrer');
+  return true;
+}
 
 function applyConfigToDom() {
   document.title = `${projectName} · Proyecto piloto de residuos orgánicos en Salta Capital`;
@@ -34,20 +78,18 @@ function applyConfigToDom() {
     el.setAttribute('href', `https://wa.me/${whatsappNumber}?text=${message}`);
   });
 
-  const ig = document.querySelector('[data-social-instagram]');
-  if (ig) {
-    ig.setAttribute('href', social.instagram);
-    if (social.instagram === '#') {
-      ig.setAttribute('aria-disabled', 'true');
-    }
-  }
+  const igVisible = configureSocialLink(
+    document.querySelector('[data-social-instagram]'),
+    social.instagram,
+  );
+  const fbVisible = configureSocialLink(
+    document.querySelector('[data-social-facebook]'),
+    social.facebook,
+  );
 
-  const fb = document.querySelector('[data-social-facebook]');
-  if (fb) {
-    fb.setAttribute('href', social.facebook);
-    if (social.facebook === '#') {
-      fb.setAttribute('aria-disabled', 'true');
-    }
+  const socialBlock = document.querySelector('[data-social-block]');
+  if (socialBlock) {
+    socialBlock.hidden = !(igVisible || fbVisible);
   }
 }
 
@@ -57,6 +99,8 @@ function initHeader() {
   const panel = document.querySelector('[data-nav-panel]');
 
   if (!header || !toggle || !panel) return;
+
+  const desktopMq = window.matchMedia(DESKTOP_NAV_MQ);
 
   const setOpen = (open) => {
     panel.classList.toggle('is-open', open);
@@ -73,8 +117,20 @@ function initHeader() {
   });
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') setOpen(false);
+    if (event.key !== 'Escape') return;
+    if (!panel.classList.contains('is-open')) return;
+    setOpen(false);
+    toggle.focus();
   });
+
+  const syncDesktopNav = () => {
+    if (desktopMq.matches) {
+      setOpen(false);
+    }
+  };
+
+  syncDesktopNav();
+  desktopMq.addEventListener('change', syncDesktopNav);
 
   const onScroll = () => {
     header.classList.toggle('is-scrolled', window.scrollY > 8);
@@ -191,7 +247,7 @@ function initInterestForm() {
      * Valor temporal: 5490000000000 — REEMPLAZAR antes de publicar.
      */
     const url = `https://wa.me/${whatsappNumber}?text=${text}`;
-    window.open(url, '_blank', 'noopener,noreferrer');
+    openWhatsApp(url);
   });
 }
 

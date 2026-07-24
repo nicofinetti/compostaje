@@ -14,7 +14,16 @@
       content="Recolección domiciliaria de residuos orgánicos en Salta Capital. Cupos limitados. Cobertura inicial reducida."
     />
     <meta property="og:type" content="website" />
+    <!--
+      PLACEHOLDER — metadatos sociales (antes de publicar):
+      1. Reemplazar public/og-image.svg por una imagen PNG o JPG de 1200 × 630.
+      2. Cambiar og:image a una URL absoluta (ej. https://dominio-definitivo/og-image.jpg).
+      3. Agregar <meta property="og:url" content="https://dominio-definitivo/" />
+         cuando exista el dominio definitivo.
+      No inventar dominio todavía. El SVG actual es solo provisional.
+    -->
     <meta property="og:image" content="./og-image.svg" />
+    <!-- <meta property="og:url" content="https://DOMINIO-DEFINITIVO/" /> -->
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -435,7 +444,11 @@
               </p>
               <div class="btn-group">
                 <a class="btn btn--primary" href="#sumate">Quiero sumarme al piloto</a>
-                <a class="btn btn--secondary-dark" href="#" data-whatsapp-direct>Consultar por WhatsApp</a>
+                <a
+                  class="btn btn--secondary-dark"
+                  href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20el%20proyecto%20piloto%20Ciclo%20Salta."
+                  data-whatsapp-direct
+                >Consultar por WhatsApp</a>
               </div>
             </div>
           </div>
@@ -548,7 +561,11 @@
                 <p class="form__note">
                   Registrarse no garantiza ingreso inmediato. Cupos limitados. Cobertura inicial reducida.
                 </p>
-                <a class="btn btn--ghost" href="#" data-whatsapp-direct>
+                <a
+                  class="btn btn--ghost"
+                  href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20el%20proyecto%20piloto%20Ciclo%20Salta."
+                  data-whatsapp-direct
+                >
                   Escribir por WhatsApp sin formulario
                 </a>
               </div>
@@ -659,11 +676,17 @@
             </div>
 
             <div>
-              <p class="footer__heading">Redes</p>
-              <!-- PLACEHOLDER: redes sociales — src/config.js → social -->
-              <div class="footer__social">
-                <a class="social-link" data-social-instagram href="#" rel="noopener noreferrer">Instagram</a>
-                <a class="social-link" data-social-facebook href="#" rel="noopener noreferrer">Facebook</a>
+              <!--
+                PLACEHOLDER: redes — src/config.js → social.
+                Ocultas por defecto; JS solo las muestra si hay URL real (no vacía ni '#').
+                Sin JS no aparecen (evita href="#" y saltos al inicio).
+              -->
+              <div data-social-block hidden>
+                <p class="footer__heading">Redes</p>
+                <div class="footer__social">
+                  <a class="social-link" data-social-instagram hidden>Instagram</a>
+                  <a class="social-link" data-social-facebook hidden>Facebook</a>
+                </div>
               </div>
               <p class="footer__text footer__zone">
                 Zona piloto:

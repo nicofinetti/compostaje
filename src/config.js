@@ -36,11 +36,12 @@ export const projectConfig = {
   pilotZone: '[Barrio / microzona — por definir]',
 
   /**
-   * PLACEHOLDER: redes sociales (dejar vacío o '#' si aún no existen).
-   * REEMPLAZAR con URLs reales cuando estén disponibles.
+   * PLACEHOLDER: redes sociales.
+   * Usar URL absoluta real, o '' / '#' mientras no existan.
+   * Si está vacío o es '#', el enlace se oculta (no queda en el tab order).
    */
   social: {
-    instagram: '#', // PLACEHOLDER: URL de Instagram
-    facebook: '#', // PLACEHOLDER: URL de Facebook
+    instagram: '', // PLACEHOLDER: ej. https://instagram.com/cuenta
+    facebook: '', // PLACEHOLDER: ej. https://facebook.com/pagina
   },
 };

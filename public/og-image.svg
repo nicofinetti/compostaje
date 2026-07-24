@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none" aria-hidden="true">
+  <!--
+    PLACEHOLDER provisional.
+    Antes de publicar: reemplazar este archivo por PNG o JPG 1200×630
+    y apuntar og:image a una URL absoluta del dominio definitivo.
+  -->
   <rect width="1200" height="630" fill="#2F4F3E"/>
   <circle cx="980" cy="120" r="220" fill="#3F6B4F" opacity="0.45"/>
   <circle cx="160" cy="520" r="180" fill="#243D30" opacity="0.55"/>

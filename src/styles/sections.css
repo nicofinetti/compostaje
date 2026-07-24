@@ -256,6 +256,10 @@
   margin-top: var(--space-4);
 }
 
+[data-social-block]:not([hidden]) + .footer__zone {
+  margin-top: var(--space-6);
+}
+
 .process-note {
   margin-top: var(--space-8);
   max-width: 40rem;
@@ -404,8 +408,12 @@
   color: rgb(255 255 255 / 0.55);
 }
 
-/* Reveal motion */
-.reveal {
+/*
+ * Reveal: mejora progresiva.
+ * Sin JS el contenido permanece visible.
+ * Con JS (.js en <html>) se anima al entrar en viewport.
+ */
+.js .reveal {
   opacity: 0;
   transform: translateY(0.75rem);
   transition:
@@ -413,13 +421,13 @@
     transform 0.5s var(--ease);
 }
 
-.reveal.is-visible {
+.js .reveal.is-visible {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal {
+  .js .reveal {
     opacity: 1;
     transform: none;
     transition: none;
