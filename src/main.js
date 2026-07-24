@@ -193,6 +193,9 @@ function initInterestForm() {
     whatsapp: form.querySelector('#error-whatsapp'),
   };
 
+  if (!fields.name || !fields.zone || !fields.whatsapp || !fields.comment) return;
+  if (!errors.name || !errors.zone || !errors.whatsapp) return;
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -249,6 +252,9 @@ function initInterestForm() {
     const url = `https://wa.me/${whatsappNumber}?text=${text}`;
     openWhatsApp(url);
   });
+
+  // Mostrar el formulario solo cuando JS lo inicializó correctamente.
+  form.hidden = false;
 }
 
 applyConfigToDom();

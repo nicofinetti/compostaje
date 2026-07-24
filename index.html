@@ -571,7 +571,19 @@
               </div>
 
               <div class="form-panel reveal">
-                <form class="form" data-interest-form novalidate>
+                <noscript>
+                  <p class="form__note">
+                    Para completar el formulario necesitás habilitar JavaScript. También podés escribirnos
+                    directamente por WhatsApp.
+                  </p>
+                  <div class="btn-group">
+                    <a
+                      class="btn btn--primary"
+                      href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20el%20proyecto%20piloto%20Ciclo%20Salta."
+                    >Escribir por WhatsApp</a>
+                  </div>
+                </noscript>
+                <form class="form" data-interest-form hidden novalidate>
                   <div class="form__field">
                     <label class="form__label" for="nombre">
                       Nombre <span class="form__required" aria-hidden="true">*</span>
@@ -670,7 +682,11 @@
                 </li>
                 <li>
                   <!-- PLACEHOLDER: WhatsApp — también en src/config.js → whatsappNumber -->
-                  <a class="footer__link" href="#" data-whatsapp-direct>WhatsApp</a>
+                  <a
+                    class="footer__link"
+                    href="https://wa.me/5490000000000?text=Hola%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20el%20proyecto%20piloto%20Ciclo%20Salta."
+                    data-whatsapp-direct
+                  >WhatsApp</a>
                 </li>
               </ul>
             </div>
